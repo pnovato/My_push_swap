@@ -50,6 +50,20 @@ int	push(s_list **stack_destiny, s_list **stack_origin)
 	return (0);
 }
 
+int	rotate(s_list **stack_master)
+{
+	s_list *head;
+	s_list *tail;
+	if (ft_lstsize(*stack_master) == 0)
+		return (-1);
+	head = *stack;
+	tail = ft_lstlast(head);
+	*stack_master = head->next;
+	head->next = NULL;
+	tail->next = head;
+	return (0);	
+}
+
 int	sa(s_list **stack_a)
 {
 	if (swap(stack_a) == -1)
