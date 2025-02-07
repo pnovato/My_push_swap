@@ -52,8 +52,8 @@ int	push(s_list **stack_destiny, s_list **stack_origin)
 
 int	rotate(s_list **stack_master)
 {
-	s_list *head;
-	s_list *tail;
+	s_list	*head;
+	s_list	*tail;
 	if (ft_lstsize(*stack_master) == 0)
 		return (-1);
 	head = *stack;
@@ -62,6 +62,28 @@ int	rotate(s_list **stack_master)
 	head->next = NULL;
 	tail->next = head;
 	return (0);	
+}
+
+int	reverseRotate(s_list **stack_master)
+{
+	s_list	*head;
+	s_list	*tail;
+	if (ft_lstsize(*stack_master) < 2)
+		return (-1);
+	head = *stack_master;
+	tail = ft_lstlast(head);
+	while (head)
+	{
+		if (head->next->next == NULL)
+		{
+			head->next = NULL;
+			break;
+		}
+		head = head->next;
+	}
+	tail->next = *stack;
+	*stack = tail;
+	return (0);
 }
 
 int	sa(s_list **stack_a)
@@ -107,4 +129,55 @@ int	pb(s_list **stack_b, s_list **stack_a)
 	return (0);
 }
 
+int	ra(s_list **stack_a)
+{
+	if (rotate(stack_a) == -1)
+		return (-1);
+	ft_putendl_fd("ra", 1);
+	return (0);
+}
+
+int	rb(s_list **stack_b)
+{
+	if (rotate(stack_b) == -1)
+		return (-1);
+	ft_putendl_fd("rb", 1);
+	return (0);
+}
+
+int	rr(s_list **stack_a, s_list **stack_b)
+{
+	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
+		return (-1);
+	rotate(stack_a);
+	rotate(stack_b);
+	ft_putendl_fd("rr", 1);
+	return (0);
+}
+
+int	rra(s_list **stack_a)
+{
+	if (reverseRotate(stack_a) == -1)
+		return (-1);
+	ft_putendl_fd("rra", 1);
+	return (0);
+}
+
+int	rrb(s_list **stack_b)
+{
+	if (reverseRotate(stack_b) == -1)
+		return (-1);
+	ft_putendl_fd("rrb", 1);
+	return (0);
+}
+
+int	rrr(s_list **stack_a, s_list **stack_b)
+{
+	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
+		return (-1);
+	reverseRotate(stack_a);
+	reverseRotate(stack_b);
+	ft_putendl_fd("rrr", 1);
+	return (0);
+}
 
