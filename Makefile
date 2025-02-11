@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 LIBFTDIR = libft
 RM = rm -rf
-SRCS = 
+SRCS = movements.c 
 OBJS = $(SRCS:.c=.o)
 
 INCLUDE = -L ./libft -lft
