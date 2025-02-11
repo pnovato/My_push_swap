@@ -9,21 +9,21 @@ OBJS = $(SRCS:.c=.o)
 INCLUDE = -L ./libft -lft
 
 .c.o:
-    ${CC} -c $< -o ${<:.c=.o}
+	${CC} -c $< -o ${<:.c=.o}
 
 $(NAME): $(OBJS)
-    @make -s -C $(LIBFTDIR)
-    $(CC) $(CFLAGS) $(OBJS) -o $(NAME) ${INCLUDE}
+	@make -s -C $(LIBFTDIR)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) ${INCLUDE}
 
 all: $(NAME)
 
 clean:
-    $(RM) $(OBJS)
-    @make -s -C $(LIBFTDIR) clean
+	$(RM) $(OBJS)
+	@make -s -C $(LIBFTDIR) clean
 
 fclean: clean
-    $(RM) $(NAME)
-    @make -s -C $(LIBFTDIR) fclean
+	$(RM) $(NAME)
+	@make -s -C $(LIBFTDIR) fclean
 
 re: fclean all
 

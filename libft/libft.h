@@ -18,7 +18,6 @@
 # include <string.h>
 # include <stdlib.h>
 # include "ft_printf/ft_printf.h"
-# include "get_next_line/get_next_line.h"
 
 typedef struct s_list
 {
