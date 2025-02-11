@@ -1,9 +1,6 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
-# include <unistd.h>
-# include <stdlib.h>
-
+ 
 typedef struct t_list
 {
 	int value;
@@ -37,5 +34,5 @@ int     rra(s_list **stack_a);
 int     rrb(s_list **stack_b);
 int     rrr(s_list **stack_a, s_list **stack_b);
 
-#endif
 
+#endif

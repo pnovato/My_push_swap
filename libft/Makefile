@@ -59,14 +59,20 @@ ft_lstdelone.c \
 ft_lstclear.c \
 ft_lstiter.c \
 ft_lstmap.c\
-./ft_printf/ft_myputchar.c ./ft_printf/ft_myputnbr.c ./ft_printf/ft_myputstr.c ./ft_printf/ft_myputhex.c ./ft_printf/ft_myputnbr_u.c ./ft_printf/ft_printf.c ./ft_printf/ft_myputhex_upper.c ./ft_printf/ft_myputnptr.c\
-./get_next_line/get_next_line.c ./get_next_line/get_next_line_utils.c
+./ft_printf/ft_myputchar.c\
+./ft_printf/ft_myputnbr.c\
+./ft_printf/ft_myputstr.c\
+./ft_printf/ft_myputhex.c\
+./ft_printf/ft_myputnbr_u.c\
+./ft_printf/ft_printf.c\
+./ft_printf/ft_myputhex_upper.c\
+./ft_printf/ft_myputnptr.c
 
 OBJS = $(SRCS:.c=.o)
 
-all:$(NAME)
+all: $(NAME)
 
-$(NAME):$(OBJS)
+$(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c

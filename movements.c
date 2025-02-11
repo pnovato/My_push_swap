@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "push_swap.h"
 
 void	swap(s_list **a)
