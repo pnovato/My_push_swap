@@ -1,14 +1,14 @@
-#include "push_swap.h"
+include "push_swap.h"
 
 void	swap(s_list **a)
 {
 	s_list	*head;
 	s_list	*next;
-	int	aux_value;
-	int	aux_index;
+	int		aux_value;
+	int		aux_index;
 
 	if (ft_lstsize(*a) < 2)
-		return(-1);
+		return (-1);
 	head = *a;
 	next = a->next;
 	if (!head && !next)
@@ -53,6 +53,7 @@ int	rotate(s_list **stack_master)
 {
 	s_list	*head;
 	s_list	*tail;
+
 	if (ft_lstsize(*stack_master) == 0)
 		return (-1);
 	head = *stack;
@@ -60,13 +61,14 @@ int	rotate(s_list **stack_master)
 	*stack_master = head->next;
 	head->next = NULL;
 	tail->next = head;
-	return (0);	
+	return (0);
 }
 
-int	reverseRotate(s_list **stack_master)
+int	reverserotate(s_list **stack_master)
 {
 	s_list	*head;
 	s_list	*tail;
+
 	if (ft_lstsize(*stack_master) < 2)
 		return (-1);
 	head = *stack_master;
@@ -76,7 +78,7 @@ int	reverseRotate(s_list **stack_master)
 		if (head->next->next == NULL)
 		{
 			head->next = NULL;
-			break;
+			break ;
 		}
 		head = head->next;
 	}

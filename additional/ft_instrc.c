@@ -1,102 +1,101 @@
 #include "push_swap.h"
 
-
-int	ft_instrc1(char *l, s_list **stack_masterA, s_list **stack_masterB)
+int	ft_instrc1(char *l, s_list **stack_mastera, s_list **stack_masterb)
 {
 	if (!(ft_strcmp(l, "sa")))
 	{
-		swap(stack_masterA);
+		swap(stack_mastera);
 		return (0);
 	}
 	if (!(ft_strcmp(l, "sb")))
 	{
-		swap(stack_masterB);
+		swap(stack_masterb);
 		return (0);
 	}
 	if (!(ft_strcmp(l, "ss")))
 	{
-		swap(stack_masterA);
-		swap(stack_masterB);
+		swap(stack_mastera);
+		swap(stack_masterb);
 		return (0);
 	}
 	return (1);
 }
 
-int	ft_instrc2(char *l, s_list **stack_masterA, s_list **stack_masterB)
+int	ft_instrc2(char *l, s_list **stack_mastera, s_list **stack_masterb)
 {
-	if (!(ft_strcmp(l,"pa")))
+	if (!(ft_strcmp(l, "pa")))
 	{
-		push(stack_masterA, stack_masterB);
+		push(stack_mastera, stack_masterb);
 		return (0);
 	}
-	if (!(ft_strcmp(l,"pb")))
+	if (!(ft_strcmp(l, "pb")))
 	{
-		push(stack_masterB, stack_masterB);
+		push(stack_masterb, stack_mastera);
 		return (0);
 	}
 	return (1);
 }
 
-int	ft_instrc3(char *l, s_list **stack_masterA, s_list **stack_masterB)
+int	ft_instrc3(char *l, s_list **stack_mastera, s_list **stack_masterb)
 {
-	if (!(ft_strcmp(l,"ra")))
+	if (!(ft_strcmp(l, "ra")))
 	{
-		rotate(stack_masterA);
+		rotate(stack_mastera);
 		return (0);
 	}
-	if (!(ft_strcmp(l,"rb")))
+	if (!(ft_strcmp(l, "rb")))
 	{
-		rotate(stack_masterB);
+		rotate(stack_masterb);
 		return (0);
 	}
-	if (!(ft_strcmp(l,"rr")))
+	if (!(ft_strcmp(l, "rr")))
 	{
-		rotate(stack_masterA);
-		rotate(stack_masterB);
+		rotate(stack_mastera);
+		rotate(stack_masterb);
 		return (0);
 	}
 	return (1);
 }
 
-int	ft_instrc4(char *l, s_list **stack_masterA, s_list **stack_masterB)
+int	ft_instrc4(char *l, s_list **stack_mastera, s_list **stack_masterb)
 {
-	if (!(ft_strcmp(l,"rra")))
+	if (!(ft_strcmp(l, "rra")))
 	{
-		reverseRotate(stack_masterA);
+		reverserotate(stack_mastera);
 		return (0);
 	}
-	if (!(ft_strcmp(l,"rrb")))
+	if (!(ft_strcmp(l, "rrb")))
 	{
-		reverseRotate(stack_masterB);
+		reverserotate(stack_masterb);
 		return (0);
 	}
-	if (!(ft_strcmp(l,"rrr")))
+	if (!(ft_strcmp(l, "rrr")))
 	{
-		reverseRotate(stack_masterA);
-		reverseRotate(stack_masterB);
+		reverserotate(stack_mastera);
+		reverserotate(stack_masterb);
 		return (0);
 	}
 	return (1);
 }
 
-int	ft_do(char *l, s_list **stack_masterA, s_list **stack_masterB)
+int	ft_do(char *l, s_list **stack_mastera, s_list **stack_masterb)
 {
-	if (ft_instrc1(l, stack_masterA, stack_masterB)
+	if (ft_instrc1(l, stack_mastera, stack_masterb))
 	{
 		ft_error("ERROR");
 		return (-1);
 	}
-	else if (ft_instrc2(l, stack_masterA, stack_masterB)
+	else if (ft_instrc2(l, stack_mastera, stack_masterb))
 	{
 		ft_error("ERROR");
 		return (-1);
 	}
-	else if (ft_instrc3(l, stack_masterA, stack_masterB)
+	else if (ft_instrc3(l, stack_mastera, stack_masterb))
 	{
 		ft_errro("ERROR");
 		return (-1);
 	}
-	else if (ft_instrc4(l, stack_masterA, stack_masterB)
+	else if (ft_instrc4(l, stack_mastera, stack_masterb))
 	{
 		ft_error("ERROR");
 		return (-1);

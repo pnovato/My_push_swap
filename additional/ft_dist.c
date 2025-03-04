@@ -3,14 +3,14 @@
 int	ft_dist(s_list	**stack_master, int i)
 {
 	s_list	*head;
-	int	dist;
+	int		dist;
 
 	head = *stack_master;
 	dist = 0;
 	while (head)
 	{
 		if (head->index == i)
-			break;
+			break ;
 		dist++;
 		head = head->next;
 	}

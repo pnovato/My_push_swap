@@ -20,7 +20,7 @@ static void	ft_sort5(s_list **stack_master_a, s_list *stack_master_b)
 	else if (d == 4)
 		rra(stack_master_a);
 	if (ft_check_if_is_sorted(stack_master_a))
-		return;
+		return ;
 	pb(stack_master_a, stack_master_b);
 	ft_sort4(stack_master_a, stack_master_b);
 	pa(stack_master_a, stack_master_b);

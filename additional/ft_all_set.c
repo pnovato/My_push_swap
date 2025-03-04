@@ -1,10 +1,10 @@
-#include "push_swap"
+#include "push_swap.h"
 
 void	ft_print(s_list **stack, int ac, char **av)
 {
 	s_list	*n;
 	char	**arg;
-	int	i;
+	int		i;
 
 	i = 0;
 	if (ac == 2)
@@ -17,7 +17,7 @@ void	ft_print(s_list **stack, int ac, char **av)
 	while (arg[i])
 	{
 		n = ft_lstnew_push(ft_atoi(arg[i]));
-		ft_lstadd_back_push(stack,n);
+		ft_lstadd_back_push(stack, n);
 		i++;
 	}
 	ft_index_stack(stack);
@@ -27,19 +27,19 @@ void	ft_print(s_list **stack, int ac, char **av)
 
 int	main(int ac, char **av)
 {
-	s_list	**stack_masterA;
-	s_list	**stack_masterB;
+	s_list	**stack_mastera;
+	s_list	**stack_masterb;
 	char	*l;
 
 	if (ac < 2)
 		return (0);
-	stack_masterA = (s_list **)malloc(sizeof(s_list));
-	stack_masterB = (s_list **)malloc(sizeof(s_list));
-	*stack_masterA = NULL;
-	*stack_masterB = NULL;
+	stack_mastera = (s_list **)malloc(sizeof(s_list));
+	stack_masterb = (s_list **)malloc(sizeof(s_list));
+	*stack_mastera = NULL;
+	*stack_masterb = NULL;
 	ft_arg_validate(ac, av);
 	while (get_next_line(0, &l))
-		ft_do(l, stack_masterA, stack_masterB);
-	ft_print(stack_masterA, stack_masterB);
+		ft_do(l, stack_mastera, stack_masterb);
+	ft_print(stack_mastera, stack_masterb);
 	return (0);
 }

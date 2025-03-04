@@ -1,6 +1,5 @@
 #include "push_swap.h"
 
-
 static int	ft_check_num(char *n)
 {
 	int	i;
@@ -10,7 +9,7 @@ static int	ft_check_num(char *n)
 		i++;
 	while (n[i])
 	{
-		if (!ft_isdigit(n[i])
+		if (!ft_isdigit(n[i]))
 			return (0);
 		i++;
 	}
@@ -22,7 +21,7 @@ static int	ft_validator(int n, char **av, int i)
 	i++;
 	while (av[i])
 	{
-		if (ft_atoi(av[i] == num)
+		if (ft_atoi(av[i] == num))
 			return (1);
 		i++;
 	}
@@ -31,7 +30,7 @@ static int	ft_validator(int n, char **av, int i)
 
 void	ft_arg_validate(int ac, char **av)
 {
-	int	i;
+	int		i;
 	long	aux;
 	char	**a;
 
@@ -48,7 +47,7 @@ void	ft_arg_validate(int ac, char **av)
 		aux = ft_atoi(a[i]);
 		if (!ft_check_num(a[i]))
 			ft_set_error("ERROR");
-		if(ft_validator(aux, a, i))
+		if (ft_validator(aux, a, i))
 			ft_set_error("ERROR");
 		if (aux < -2147483648 || aux > 2147483647)
 			ft_set_error("ERROR");

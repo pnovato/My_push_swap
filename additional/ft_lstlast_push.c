@@ -4,8 +4,8 @@
 s_list	*ft_lstlast_push(s_list *head)
 {
 	s_list	*aux;
+
 	aux = head;
-	
 	while (aux->next)
 	{
 		aux = aux->next;

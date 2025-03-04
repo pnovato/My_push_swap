@@ -3,8 +3,8 @@
 static int	ft_max_bits(s_list **stack_master)
 {
 	s_list	*head;
-	int	max;
-	int	max_bits;
+	int		max;
+	int		max_bits;
 
 	head = *stack_master;
 	max = head->index;

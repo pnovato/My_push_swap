@@ -4,7 +4,7 @@ static s_List	*ft_get_next_min(s_list **stack)
 {
 	s_list	*head;
 	s_list	*min;
-	int	m;
+	int		m;
 
 	min = NULL;
 	m = 0;
@@ -27,7 +27,7 @@ static s_List	*ft_get_next_min(s_list **stack)
 void	ft_index_stack(s_list **stack)
 {
 	s_list	*head;
-	int	i;
+	int		i;
 
 	i = 0;
 	head = ft_get_next_min(stack);
