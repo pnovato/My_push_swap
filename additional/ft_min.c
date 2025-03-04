@@ -3,7 +3,7 @@
 static int	ft_min(s_list **stack_master, int value)
 {
 	s_list	*head;
-	int	min;
+	int		min;
 
 	head = *stack_master;
 	min = head->index;
