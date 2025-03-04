@@ -1,29 +1,26 @@
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
-LIBFTDIR = libft
+CFLAGS = -Wall -Wextra -Werror -Iincludes -g
 RM = rm -rf
-SRCS = movements.c 
+SRCS = $(wildcard additional/*.c main.c)
 OBJS = $(SRCS:.c=.o)
 
-INCLUDE = -L ./libft -lft
 
 .c.o:
 	${CC} -c $< -o ${<:.c=.o}
 
 $(NAME): $(OBJS)
-	@make -s -C $(LIBFTDIR)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) ${INCLUDE}
+	@${MAKE} -C ./libft
+	@$(CC) $(CFLAGS) $(OBJS) ./libft/libft.a -o $(NAME)
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJS)
-	@make -s -C $(LIBFTDIR) clean
+	@${MAKE} -C ./libft fclean
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
-	@make -s -C $(LIBFTDIR) fclean
+	@$(RM) $(NAME)
 
 re: fclean all
 
