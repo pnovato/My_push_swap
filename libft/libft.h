@@ -68,5 +68,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *str);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+int		get_next_line(const int fd, char **line);
 
 #endif
