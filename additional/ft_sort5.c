@@ -1,6 +1,6 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static void	ft_sort5(s_list **stack_master_a, s_list *stack_master_b)
+static void	ft_sort5(t_push **stack_master_a, t_push *stack_master_b)
 {
 	int	d;
 

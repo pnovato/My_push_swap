@@ -1,6 +1,6 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_lstaddfront_push(s_list **stack_master, s_list *n)
+void	ft_lstaddfront_push(t_push **stack_master, t_push *n)
 {
 	n->next = *stack_master;
 	*stack_master = n;

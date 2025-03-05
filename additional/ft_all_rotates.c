@@ -1,6 +1,6 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ra(s_list **stack_a)
+int	ra(t_push **stack_a)
 {
 	if (rotate(stack_a) == -1)
 		return (-1);
@@ -8,7 +8,7 @@ int	ra(s_list **stack_a)
 	return (0);
 }
 
-int	rb(s_list **stack_b)
+int	rb(t_push **stack_b)
 {
 	if (rotate(stack_b) == -1)
 		return (-1);
@@ -16,7 +16,7 @@ int	rb(s_list **stack_b)
 	return (0);
 }
 
-int	rr(s_list **stack_a, s_list **stack_b)
+int	rr(t_push **stack_a, t_push **stack_b)
 {
 	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
 		return (-1);

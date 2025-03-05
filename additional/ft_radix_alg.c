@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	move_nodes(s_list **stacka, s_list **stackb, int i, int s)
+void	move_nodes(t_push **stacka, t_push **stackb, int i, int s)
 {
-	s_list	*head;
+	t_push	*head;
 	int		j;
 
 	j = 0;
@@ -17,7 +17,7 @@ void	move_nodes(s_list **stacka, s_list **stackb, int i, int s)
 	}
 }
 
-void	ft_radix_alg(s_list **stack_mastera, s_list **stack_masterb)
+void	ft_radix_alg(t_push **stack_mastera, t_push **stack_masterb)
 {
 	int		i;
 	int		s;

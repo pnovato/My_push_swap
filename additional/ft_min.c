@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static int	ft_min(s_list **stack_master, int value)
+static int	ft_min(t_push **stack_master, int value)
 {
-	s_list	*head;
+	t_push	*head;
 	int		min;
 
 	head = *stack_master;

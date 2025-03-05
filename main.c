@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-static void	instack(t_list **stack, int ac, char **av)
+static void	instack(t_push **stack, int ac, char **av)
 {
 	s_lit	*n;
 	char	**args;
@@ -25,7 +25,7 @@ static void	instack(t_list **stack, int ac, char **av)
 		ft_free(args);
 }
 
-static void	sort_stack(t_list **stackA, t_list **stackB)
+static void	sort_stack(t_push **stackA, t_push **stackB)
 {
 	if (ft_lstsize_push(*stackA) <= 5)
 		simple_sort(stackA, stackB);
@@ -35,14 +35,14 @@ static void	sort_stack(t_list **stackA, t_list **stackB)
 
 int	main(int ac, char **av)
 {
-	t_list	**stacka;
-	t_list	**stackb;
+	t_push	**stacka;
+	t_push	**stackb;
 
 	if (ac < 2)
 		return (-1);
 	ft_arg_validate(ac, av);
-	stackA = (t_list **)malloc(sizeof(t_list));
-	stackB = (t_list **)malloc(sizeof(t_list));
+	stackA = (t_push **)malloc(sizeof(t_push));
+	stackB = (t_push **)malloc(sizeof(t_push));
 	*stackA = NULL;
 	*stackB = NULL;
 	inStack(stackA, ac, av);

@@ -1,6 +1,6 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	pa(s_list **stack_a, s_list **stack_b)
+int	pa(t_push **stack_a, t_push **stack_b)
 {
 	if (push(*stack_a, *stack_b) == -1)
 		return (-1);
@@ -8,7 +8,7 @@ int	pa(s_list **stack_a, s_list **stack_b)
 	return (0);
 }
 
-int	pb(s_list **stack_b, s_list **stack_a)
+int	pb(t_push **stack_b, t_push **stack_a)
 {
 	if (push(*stack_b, *stack_a) == -1)
 		return (-1);

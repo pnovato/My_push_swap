@@ -1,11 +1,11 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //function to creat a node
-s_list	*ft_lstnew_push(int value)
+t_push	*ft_lstnew_push(int value)
 {
-	s_list	*node;
+	t_push	*node;
 
-	new = (s_list *)malloc(sizeof(*node));
+	node = (t_push *)malloc(sizeof(*node));
 	if (!node)
 		return (NULL);
 	node->value = value;

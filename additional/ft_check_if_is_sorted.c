@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_check_if_is_sorted(s_list **stack_master)
+int	ft_check_if_is_sorted(t_push **stack_master)
 {
-	s_list	*head;
+	t_push	*head;
 
 	head = *stack_master;
 	while (head && head->next)

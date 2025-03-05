@@ -1,9 +1,9 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //function to return the last node of the list
-s_list	*ft_lstlast_push(s_list *head)
+t_push	*ft_lstlast_push(t_push *head)
 {
-	s_list	*aux;
+	t_push	*aux;
 
 	aux = head;
 	while (aux->next)
