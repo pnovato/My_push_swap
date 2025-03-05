@@ -1,6 +1,6 @@
 NAME = push_swap
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes -g
+CFLAGS = -Wall -Wextra -Werror -I. -g
 RM = rm -rf
 SRCS = $(wildcard additional/*.c main.c)
 OBJS = $(SRCS:.c=.o)

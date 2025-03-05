@@ -17,7 +17,10 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include "ft_printf/ft_printf.h"
+# include <fcntl.h>
+
+# define BUFF_SIZE	(1)
+# define MAX_FD (1025)
 
 typedef struct s_list
 {

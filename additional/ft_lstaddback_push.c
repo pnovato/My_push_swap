@@ -1,9 +1,9 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //function to add a node and it becomes the last node
-void	ft_lstadd_back_push(s_list **stack_master, s_list *node)
+void	ft_lstadd_back_push(t_push **stack_master, t_push *node)
 {
-	s_list	*aux;
+	t_push	*aux;
 
 	if (*stack_master)
 	{

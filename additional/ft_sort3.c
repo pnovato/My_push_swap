@@ -1,14 +1,14 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static void	execute(s_list **stack_master_a)
+static void	execute(t_push **stack_master_a)
 {
 	sa(stack_master_a);
 	rra(stack_master_a);
 }
 
-static void	handle_case(s_list **stack_master_a, int min, int next_min)
+static void	handle_case(t_push **stack_master_a, int min, int next_min)
 {
-	s_list	*head;
+	t_push	*head;
 
 	head = *stack_master_a;
 	if ((head->index == min) && (head->next->index != next_min))
@@ -33,7 +33,7 @@ static void	handle_case(s_list **stack_master_a, int min, int next_min)
 	}
 }
 
-static void	ft_sort3(s_list **stack_master_a)
+static void	ft_sort3(t_push **stack_master_a)
 {
 	int		min;
 	int		next_min;

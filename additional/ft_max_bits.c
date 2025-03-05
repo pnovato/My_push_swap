@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-static int	ft_max_bits(s_list **stack_master)
+static int	ft_max_bits(t_push **stack_master)
 {
-	s_list	*head;
+	t_push	*head;
 	int		max;
 	int		max_bits;
 

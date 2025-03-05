@@ -1,9 +1,9 @@
-include "push_swap.h"
+include "../push_swap.h"
 
-void	swap(s_list **a)
+int	swap(t_push **a)
 {
-	s_list	*head;
-	s_list	*next;
+	t_push	*head;
+	t_push	*next;
 	int		aux_value;
 	int		aux_index;
 
@@ -22,11 +22,11 @@ void	swap(s_list **a)
 	return (0);
 }
 
-int	push(s_list **stack_destiny, s_list **stack_origin)
+int	push(t_push **stack_destiny, t_push **stack_origin)
 {
-	s_list	*temp;
-	s_list	*head_destiny;
-	s_list	*head_origin;
+	t_push	*temp;
+	t_push	*head_destiny;
+	t_push	*head_origin;
 
 	if (ft_lstsize(*stack_origin) == 0)
 		return (-1);
@@ -49,10 +49,10 @@ int	push(s_list **stack_destiny, s_list **stack_origin)
 	return (0);
 }
 
-int	rotate(s_list **stack_master)
+int	rotate(t_push **stack_master)
 {
-	s_list	*head;
-	s_list	*tail;
+	t_push	*head;
+	t_push	*tail;
 
 	if (ft_lstsize(*stack_master) == 0)
 		return (-1);
@@ -64,10 +64,10 @@ int	rotate(s_list **stack_master)
 	return (0);
 }
 
-int	reverserotate(s_list **stack_master)
+int	reverserotate(t_push **stack_master)
 {
-	s_list	*head;
-	s_list	*tail;
+	t_push	*head;
+	t_push	*tail;
 
 	if (ft_lstsize(*stack_master) < 2)
 		return (-1);

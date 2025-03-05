@@ -1,6 +1,6 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_instrc1(char *l, s_list **stack_mastera, s_list **stack_masterb)
+int	ft_instrc1(char *l, t_push **stack_mastera, t_push **stack_masterb)
 {
 	if (!(ft_strcmp(l, "sa")))
 	{
@@ -21,7 +21,7 @@ int	ft_instrc1(char *l, s_list **stack_mastera, s_list **stack_masterb)
 	return (1);
 }
 
-int	ft_instrc2(char *l, s_list **stack_mastera, s_list **stack_masterb)
+int	ft_instrc2(char *l, t_push **stack_mastera, t_push **stack_masterb)
 {
 	if (!(ft_strcmp(l, "pa")))
 	{
@@ -36,7 +36,7 @@ int	ft_instrc2(char *l, s_list **stack_mastera, s_list **stack_masterb)
 	return (1);
 }
 
-int	ft_instrc3(char *l, s_list **stack_mastera, s_list **stack_masterb)
+int	ft_instrc3(char *l, t_push **stack_mastera, t_push **stack_masterb)
 {
 	if (!(ft_strcmp(l, "ra")))
 	{
@@ -57,7 +57,7 @@ int	ft_instrc3(char *l, s_list **stack_mastera, s_list **stack_masterb)
 	return (1);
 }
 
-int	ft_instrc4(char *l, s_list **stack_mastera, s_list **stack_masterb)
+int	ft_instrc4(char *l, t_push **stack_mastera, t_push **stack_masterb)
 {
 	if (!(ft_strcmp(l, "rra")))
 	{
@@ -78,7 +78,7 @@ int	ft_instrc4(char *l, s_list **stack_mastera, s_list **stack_masterb)
 	return (1);
 }
 
-int	ft_do(char *l, s_list **stack_mastera, s_list **stack_masterb)
+int	ft_do(char *l, t_push **stack_mastera, t_push **stack_masterb)
 {
 	if (ft_instrc1(l, stack_mastera, stack_masterb))
 	{

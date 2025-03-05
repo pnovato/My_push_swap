@@ -1,9 +1,9 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_stack_master_free(s_list **stack_master)
+void	ft_stack_master_free(t_push **stack_master)
 {
-	s_list	*head;
-	s_list	*aux;
+	t_push	*head;
+	t_push	*aux;
 
 	head = *stack_master;
 	while (head)

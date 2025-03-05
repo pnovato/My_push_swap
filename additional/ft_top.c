@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_top(s_list **stack_master, int dist)
+void	ft_top(t_push **stack_master, int dist)
 {
-	s_List	*head;
+	t_push	*head;
 	int		aux;
 
 	if (dist == 0)

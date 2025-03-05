@@ -1,8 +1,8 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_print(s_list **stack, int ac, char **av)
+void	ft_print(t_push **stack, int ac, char **av)
 {
-	s_list	*n;
+	t_push	*n;
 	char	**arg;
 	int		i;
 
@@ -25,21 +25,34 @@ void	ft_print(s_list **stack, int ac, char **av)
 		ft_free(arg);
 }
 
+void	print_checker_res(t_list **stack_a, t_list **stack_b)
+{
+	if (is_sorted(stack_a))
+		ft_putendl_fd("OK\n", 1);
+	else
+		ft_putendl_fd("KO\n", 1);
+	if (*stack_a)
+		free_stack(stack_a);
+	if (*stack_b)
+		free_stack(stack_b);
+}
+
 int	main(int ac, char **av)
 {
-	s_list	**stack_mastera;
-	s_list	**stack_masterb;
+	t_push	**stack_mastera;
+	t_push	**stack_masterb;
 	char	*l;
 
 	if (ac < 2)
 		return (0);
-	stack_mastera = (s_list **)malloc(sizeof(s_list));
-	stack_masterb = (s_list **)malloc(sizeof(s_list));
+	stack_mastera = (t_push **)malloc(sizeof(t_push));
+	stack_masterb = (t_push **)malloc(sizeof(t_push));
 	*stack_mastera = NULL;
 	*stack_masterb = NULL;
 	ft_arg_validate(ac, av);
+	ft_print(stack_mastera, ac, av);
 	while (get_next_line(0, &l))
 		ft_do(l, stack_mastera, stack_masterb);
-	ft_print(stack_mastera, stack_masterb);
+	print_checker_res(stack_mastera, stack_masterb);
 	return (0);
 }

@@ -1,10 +1,10 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 //function to size the list
-int	ft_lstsize_push(s_list *head)
+int	ft_lstsize_push(t_push *head)
 {
 	size_t	i;
-	s_list	*aux;
+	t_push	*aux;
 
 	aux = head;
 	i = 0;

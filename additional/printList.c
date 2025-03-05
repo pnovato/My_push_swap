@@ -1,9 +1,9 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 // function to print list
-void	printlist(s_list *head)
+void	printlist(t_push *head)
 {
-	t_list	*aux;
+	t_push	*aux;
 
 	aux = head;
 	while (aux != NULL)
